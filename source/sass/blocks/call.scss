@@ -1,0 +1,56 @@
+.call {
+  background-color: $background-call;
+  padding-top: 54rem;
+  padding-bottom: 81rem;
+  min-height: 400rem;
+}
+
+.call__wrapper {
+  width: 967rem;
+  margin: 0 auto;
+}
+
+.call__title {
+  font-weight: 500;
+  font-size: 36rem;
+  line-height: 42rem;
+  text-align: center;
+  color: $text-default;
+  margin: 0 auto;
+  margin-bottom: 62rem;
+  max-width: 586rem;
+}
+
+.call__form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.call__form .form__phone {
+  width: 320rem;
+  height: 60rem;
+  margin-right: 30rem;
+  margin-bottom: 30rem;
+}
+
+.call__form .form__name {
+  width: 302rem;
+  height: 60rem;
+  margin-right: 30rem;
+  margin-bottom: 30rem;
+}
+
+.call__form .form__button {
+  width: 302rem;
+  height: 60rem;
+}
+
+.call__image {
+  position: absolute;
+  top: -116rem;
+  right: 0;
+  width: 403rem;
+  height: 462rem;
+}

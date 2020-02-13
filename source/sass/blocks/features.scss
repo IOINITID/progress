@@ -1,0 +1,48 @@
+.features {
+  background-color: $background-features;
+  padding-top: 80rem;
+  padding-bottom: 67rem;
+}
+
+.features__wrappper {
+  width: 1193rem;
+  margin: 0 auto;
+}
+
+.features__title {
+  font-weight: 500;
+  font-size: 48rem;
+  line-height: 80rem;
+  color: $text-default;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 71rem;
+}
+
+.features__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  width: 195rem;
+  min-height: 268rem;
+  margin-right: 137rem;
+  margin-bottom: 50rem;
+}
+
+.features__item:nth-child(4) {
+  margin-right: 0;
+}
+
+.features__icon {
+  width: 195rem;
+  height: 200rem;
+  margin-bottom: 32rem;
+}
+
+.features__text {
+  margin: 0;
+  text-align: center;
+}

@@ -1,0 +1,61 @@
+.stages {
+  padding-top: 80rem;
+  padding-bottom: 30rem;
+}
+
+.stages__wrapper {
+  width: 868rem;
+  margin: 0 auto;
+}
+
+.stages__title {
+  font-weight: 500;
+  font-size: 48rem;
+  line-height: 80rem;
+  color: $text-default;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 66rem;
+}
+
+.stages__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stages__item {
+  width: 224rem;
+  min-height: 285rem;
+  margin-right: 98rem;
+  margin-bottom: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stages__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.stages__icon {
+  margin-bottom: 35rem;
+}
+
+.stages__text {
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 20rem;
+  text-align: center;
+  color: $text-default;
+  margin: 0;
+}
+
+.stages__info {
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 20rem;
+  text-align: center;
+  color: $text-default;
+  margin: 0;
+}
