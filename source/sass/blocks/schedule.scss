@@ -1,0 +1,31 @@
+.schedule {
+  display: flex;
+  align-items: center;
+  max-width: 237rem;
+}
+
+.shedule__icon {
+  width: 18rem;
+  height: 18rem;
+  margin-right: 13rem;
+}
+
+.schedule__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: $font-default;
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 18rem;
+  color: $text-default;
+}
+
+.schedule-title {
+  margin: 0;
+}
+
+.schedule-info {
+  margin: 0;
+  font-weight: 500;
+}

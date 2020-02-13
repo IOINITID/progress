@@ -1,0 +1,24 @@
+.phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 302rem;
+  min-height: 80rem;
+  background: #F2F2F2;
+  margin-left: 96rem;
+}
+
+.phone__icon {
+  width: 18rem;
+  height: 18rem;
+  margin-right: 12rem;
+}
+
+.phone__link {
+  font-family: $font-default;
+  font-weight: 500;
+  font-size: 24rem;
+  line-height: 23rem;
+  color: $text-default;
+  text-decoration: none;
+}

@@ -1,18 +1,29 @@
 // Fonts
-$font-default: "", "Arial", sans-serif;
-$font-additional: "", "Arial", sans-serif;
+$font-default: "Gotham Pro", "Arial", sans-serif;
+// $font-additional: "", "Arial", sans-serif;
 
 // Colors: Text colors
-$text-default: #ffffff;
+$text-default: #353533;
+$text-additional: #ffffff;
+$text-link: #5a9cff;
+$text-category: #7d7d7d;
+$text-cost: #ad2320;
 
 // Colors: Buttons colors
-$button-default: #ffffff;
+$button-default: #ad2320;
+$button-default--hover: #9b1f1c;
+$button-default--active: #8a1c19;
 
 // Colors: Backgrounds colors
 $background-default: #ffffff;
+$background-installation: #6d6d6d;
+$background-controls: #f2f2f2;
+
 
 // Colors: Border color
-$border-default: #ffffff;
+$border-default: #000000;
+$border-product: #e2e2e2;
+$border-controls: #e2e2e2;
 
 
 // Media width

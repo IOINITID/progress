@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__wrapper {}
+
+.header__top {
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.header__top-wrapper {
+  display: flex;
+  min-height: 80rem;
+  align-items: center;
+}
+
+.header__bottom {
+  display: flex;
+  min-height: 49rem;
+}
+
+.header__decorative {
+  width: 302rem;
+  margin-left: auto;
+  background-color: #F2F2F2;
+}
+
+.header__logo {}
+
+.header__schedule {
+  margin-left: auto;
+}

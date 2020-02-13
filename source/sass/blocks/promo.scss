@@ -1,0 +1,26 @@
+.promo {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/promo-background.jpg");
+  background-position: 50% 50%;
+  min-height: 870rem;
+}
+
+.promo__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__title {
+  width: 705rem;
+  height: 240rem;
+  margin: 0;
+  font-family: $font-default;
+  font-weight: 400;
+  font-size: 64rem;
+  line-height: 80rem;
+  color: $text-additional;
+  margin-top: 315rem;
+}
+
+.promo__modal {
+  margin-top: 165rem;
+}

@@ -1,0 +1,98 @@
+.slider__item {
+  display: flex !important; // Исключительно для слайдера slick
+}
+
+.slider__image {
+  width: 524rem;
+  height: 524rem;
+  margin-right: 30rem;
+}
+
+.slider__info {}
+
+.slider__title {
+  font-weight: 500;
+  font-size: 36rem;
+  line-height: 34rem;
+  color: $text-default;
+  margin: 0;
+  margin-bottom: 33rem;
+}
+
+.slider__list {
+  @include list-reset;
+}
+
+.slider__info-list {
+  @include list-reset;
+}
+
+.slider__info-item {}
+
+.slider__item-list {
+  margin: 0;
+  margin-bottom: 20rem;
+}
+
+.slider__item-title {
+  font-weight: 500;
+  font-size: 16rem;
+  line-height: 20rem;
+  color: $text-default;
+  margin: 0;
+  margin-bottom: 20rem;
+}
+
+.slider__item-text {
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 20rem;
+  color: $text-default;
+  margin: 0;
+}
+
+.slider__controls {
+  @include list-reset;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.slider__controls-prev {
+  width: 70rem;
+  height: 60rem;
+  border-radius: 4rem 0 0 4rem;
+  border: 1rem solid $border-controls;
+  border-right: 1rem solid $border-controls;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slider__controls-prev:hover,
+.slider__controls-prev:focus {
+  background-color: $background-controls;
+}
+
+.slider__controls-next {
+  width: 70rem;
+  height: 60rem;
+  border-radius: 4rem 0 0 4rem;
+  border: 1rem solid $border-controls;
+  border-right: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.slider__controls-next:hover,
+.slider__controls-next:focus {
+  background-color: $background-controls;
+}

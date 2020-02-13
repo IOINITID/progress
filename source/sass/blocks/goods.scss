@@ -1,0 +1,32 @@
+.goods {
+  padding-bottom: 80rem;
+}
+
+.goods__wrapper {}
+
+.goods__title {
+  margin: 0;
+  margin-top: 55rem;
+  margin-bottom: 65rem;
+  font-weight: 500;
+  font-size: 48rem;
+  line-height: 80rem;
+  color: $text-default;
+  text-align: center;
+}
+
+.goods__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 35rem;
+}
+
+.goods__item {
+  margin-right: 30rem;
+  margin-bottom: 30rem;
+}
+
+.goods__item:nth-child(3n) {
+  margin-right: 0;
+}

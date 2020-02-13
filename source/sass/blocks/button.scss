@@ -1,0 +1,29 @@
+.button {
+  width: 100%;
+  min-height: 60rem;
+  background: $button-default;
+  border-radius: 4rem;
+  font-family: $font-default;
+  font-weight: 500;
+  font-size: 14rem;
+  line-height: 30rem;
+  text-align: center;
+  color: $text-additional;
+  text-transform: uppercase;
+  border: none;
+  padding: 15rem 20rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background: $button-default--hover;
+}
+
+.button:active {
+  background: $button-default--active;
+}

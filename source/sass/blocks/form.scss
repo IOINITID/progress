@@ -1,0 +1,86 @@
+.form {
+  font-family: $font-default;
+  color: $text-default;
+}
+
+.form__title {
+  font-weight: 500;
+  font-size: 24rem;
+  line-height: 30rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30rem;
+}
+
+.form__field {
+  width: 100%;
+  height: 60rem;
+  background: $background-default;
+  border: 1rem solid #E2E2E2;
+  border-radius: 4rem;
+  padding: 15rem 20rem;
+  text-align: center;
+  margin-bottom: 58rem;
+}
+
+.form__field::placeholder {
+  color: $text-default;
+}
+
+.form__phone {}
+
+.form__phone-field {}
+
+.form__name {}
+
+.form__name-field {}
+
+.form__button {
+  margin-bottom: 39rem;
+}
+
+.form__agreement-wrapper {
+  display: flex;
+}
+
+.form__agreement {
+  width: 16rem;
+  height: 16rem;
+  margin-right: 16rem;
+  cursor: pointer;
+}
+
+.form__agreement--field {}
+
+.form__check {
+  width: 100%;
+  height: 100%;
+  background: #F2F2F2;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__check-icon {
+  display: none;
+  width: 14rem;
+  height: 10rem;
+}
+
+.form__agreement--field:checked ~ .form__check .form__check-icon {
+  display: flex;
+}
+
+.form__agreement-info {
+  font-weight: 400;
+  font-size: 12rem;
+  line-height: 16rem;
+  margin: 0;
+}
+
+.form__agreement-link {
+  text-decoration: underline;
+  color: $text-link;
+}
