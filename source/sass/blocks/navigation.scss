@@ -68,3 +68,71 @@
   margin-left: 8rem;
   margin-bottom: 4rem;
 }
+
+.navigation__item--toggle {
+  position: relative;
+}
+
+.navigation__list--inner {
+  position: absolute;
+  top: 49px;
+  flex-direction: column;
+  background-color: $background-default;
+  align-items: flex-start;
+  width: max-content;
+  z-index: 1;
+  left: 0;
+  display: none;
+}
+
+.navigation__list--inner .navigation__item .navigation__link,
+.navigation__list--inner .navigation__item .navigation__link {
+  color: $text-default;
+}
+
+.navigation__list--inner .navigation__item:first-child {
+  border-top: 1rem solid $border-navigation;
+}
+
+.navigation__list--inner .navigation__item {
+  border-bottom: 1rem solid $border-navigation;
+  width: 100%;
+  display: flex;
+}
+
+.navigation__list--inner .navigation__item:hover,
+.navigation__list--inner .navigation__item:focus {
+  background-color: $background-navigation--hover;
+}
+
+.navigation__list--inner .navigation__item:active {
+  background-color: $background-navigation--active;
+}
+
+.navigation__list--inner .navigation__item:hover .navigation__link,
+.navigation__list--inner .navigation__item:focus .navigation__link {
+  color: $text-default;
+}
+
+.navigation__list--inner .navigation__link {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.navigation__item--toggle:hover .navigation__list--inner {
+  display: block;
+}
+
+.navigation__item--toggle:hover,
+.navigation__item--toggle:focus {
+  background: $button-default;
+}
+
+.navigation__item--toggle:active {
+  background: $button-default;
+}
+
+.navigation__item--toggle:hover .navigation__list--inner,
+.navigation__item--toggle:focus .navigation__list--inner {
+  display: flex;
+}
