@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   max-width: 237rem;
+  width: 100%;
 }
 
 .shedule__icon {
-  width: 18rem;
+  min-width: 18rem;
   height: 18rem;
   margin-right: 13rem;
 }

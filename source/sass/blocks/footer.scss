@@ -1,0 +1,100 @@
+.footer {
+  background: $background-footer;
+  min-height: 200rem;
+  padding-top: 21rem;
+  padding-bottom: 29rem;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer__navigation {}
+
+.footer__navigation .navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 500rem;
+}
+
+.footer__navigation .navigation__item {
+  height: auto;
+  width: 250rem;
+  justify-content: flex-start;
+}
+
+.footer__navigation .navigation__item:hover,
+.footer__navigation .navigation__item:focus {
+  background: none;
+}
+
+.footer__navigation .navigation__item:active {
+  background: none;
+}
+
+.footer__navigation .navigation__link {
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 30rem;
+  color: $text-additional;
+  padding: 0;
+  text-transform: unset;
+}
+
+.footer__navigation .navigation__link:hover {
+  background-color: none;
+  text-decoration: underline;
+}
+
+.footer__shedule {
+  margin-top: 13rem;
+  margin-right: 32rem;
+  margin-left: auto;
+}
+
+.footer__shedule .shedule__icon path {
+  fill: $background-default;
+}
+
+.footer__shedule .schedule-title {
+  color: $text-additional;
+}
+
+.footer__shedule .schedule-info {
+  color: $text-additional;
+}
+
+.footer__phone {
+  background: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  min-height: auto;
+  margin-bottom: 35rem;
+  margin-top: 21rem;
+}
+
+.footer__phone .phone__link {
+  color: $text-additional;
+}
+
+.footer__phone .phone__icon path {
+  fill: $background-default;
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+// ul {
+//   max-width: 100%;
+//   display: grid;
+//   grid-template-columns: repeat(2, auto);
+//   grid-template-rows: repeat(5, auto);
+//   grid-column-gap: 90rem;
+//   grid-row-gap: 0;
+// }

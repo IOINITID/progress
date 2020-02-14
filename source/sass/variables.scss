@@ -8,11 +8,14 @@ $text-additional: #ffffff;
 $text-link: #5a9cff;
 $text-category: #7d7d7d;
 $text-cost: #ad2320;
+$text-position: #7d7d7d;
+$text-reviews: #999999;
 
 // Colors: Buttons colors
 $button-default: #ad2320;
 $button-default--hover: #9b1f1c;
 $button-default--active: #8a1c19;
+
 
 // Colors: Backgrounds colors
 $background-default: #ffffff;
@@ -20,11 +23,17 @@ $background-installation: #6d6d6d;
 $background-controls: #f2f2f2;
 $background-features: #f2f2f2;
 $background-call: #e8dfdf;
+$background-image: #c4c4c4;
+$background-video: #353533;
+$background-reviews--hover: #f2f2f2;
+$background-reviews--active: #d9d9d9;
+$background-footer: #615353;
 
 // Colors: Border color
 $border-default: #000000;
 $border-product: #e2e2e2;
 $border-controls: #e2e2e2;
+$border-reviews: #cfcfcf;
 
 
 // Media width
