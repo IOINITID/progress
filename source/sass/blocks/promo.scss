@@ -1,7 +1,47 @@
 .promo {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/promo-background.jpg");
+  background: $background-promo;
   background-position: 50% 50%;
   min-height: 870rem;
+}
+
+.promo--jalousie {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--curtains {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/curtains-background.jpg");
+}
+
+.promo--shutters {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--gates {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--automation {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--windows {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--aluminum {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--video {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--product {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
+}
+
+.promo--reviews {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%), url("../img/jalousie-background.jpg");
 }
 
 .promo__wrapper {

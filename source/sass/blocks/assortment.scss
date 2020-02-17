@@ -1,0 +1,51 @@
+.assortment {
+  margin-top: 55rem;
+  margin-bottom: 112rem;
+}
+
+.assortment__list {
+  @include list-reset;
+  display: flex;
+  border-radius: 4rem;
+}
+
+.assortment__item {
+  background: #FFFFFF;
+  box-sizing: border-box;
+  width: 217rem;
+  height: 50rem;
+  border: 1rem solid $border-assortment;
+  border-right: none;
+}
+
+.assortment__item:first-child {
+  border-radius: 4rem 0 0 4rem;
+}
+
+.assortment__item:last-child {
+  border-radius: 0 4rem 4rem 0;
+  border-right: 1rem solid $border-assortment;
+}
+
+.assortment__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 24rem;
+  color: $text-default;
+  text-decoration: none;
+  padding: 13rem;
+}
+
+.assortment__item:hover .assortment__link,
+.assortment__item:focus .assortment__link {
+  background-color: $border-assortment--hover;
+}
+
+.assortment__item:active .assortment__link {
+  background-color: $border-assortment--active;
+}

@@ -1,0 +1,31 @@
+.breadcrumbs {
+  margin-top: 35rem;
+  margin-bottom: 80rem;
+}
+
+.breadcrumbs__wrapper {}
+
+.breadcrumbs__list {
+  @include list-reset;
+  display: flex;
+}
+
+.breadcrumbs__item {}
+
+.breadcrumbs__item::after {
+  content: "/";
+  margin: 0 4px;
+}
+
+.breadcrumbs__item:last-child::after {
+  content: none;
+  margin: 0;
+}
+
+.breadcrumbs__link {
+  font-weight: 400;
+  font-size: 14rem;
+  line-height: 30rem;
+  text-align: center;
+  color: $text-breadcrumbs;
+}

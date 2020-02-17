@@ -1,0 +1,42 @@
+.about {
+  margin-top: 80rem;
+  margin-bottom: 80rem;
+}
+
+.about__wrapper {}
+
+.about__title {
+  font-weight: 500;
+  font-size: 48rem;
+  line-height: 80rem;
+  color: $text-default;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 35rem;
+}
+
+.about__text {
+  margin: 0;
+  margin-bottom: 20rem;
+}
+
+.about__text--info {
+  font-weight: 500;
+}
+
+.about__list {
+  @include list-reset;
+  margin-bottom: 20rem;
+}
+
+.about__item {
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 20rem;
+  color: $text-default;
+}
+
+.about__item::before {
+  content: "-";
+  margin-right: 5rem;
+}

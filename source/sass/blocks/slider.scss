@@ -3,7 +3,8 @@
 }
 
 .slider__image {
-  width: 524rem;
+  max-width: 524rem;
+  min-width: 524rem;
   height: 524rem;
   margin-right: 30rem;
 }
@@ -43,12 +44,44 @@
   margin-bottom: 20rem;
 }
 
+.slider__item-title--normal {
+  font-weight: 400;
+}
+
 .slider__item-text {
   font-weight: 400;
   font-size: 16rem;
   line-height: 20rem;
   color: $text-default;
   margin: 0;
+}
+
+.slider__item-link {
+  width: 351rem;
+  margin-top: 62rem;
+}
+
+.slider__item-text-list {
+  @include list-reset;
+  margin-bottom: 20rem;
+}
+
+.slider__item-text-item::before {
+  content: "-";
+  margin-right: 6rem;
+}
+
+.slider__item-text-description {
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 20rem;
+  color: $text-default;
+  margin: 0;
+  margin-bottom: 20rem;
+}
+
+.slider__item-text-descriptio:last-child {
+  margin-bottom: 0;
 }
 
 .slider__controls {

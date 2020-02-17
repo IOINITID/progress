@@ -1,6 +1,5 @@
 // Fonts
 $font-default: "Gotham Pro", "Arial", sans-serif;
-// $font-additional: "", "Arial", sans-serif;
 
 // Colors: Text colors
 $text-default: #353533;
@@ -10,12 +9,14 @@ $text-category: #7d7d7d;
 $text-cost: #ad2320;
 $text-position: #7d7d7d;
 $text-reviews: #999999;
+$text-product: #999999;
+$text-pagination: #999999;
+$text-breadcrumbs: #7d7d7d;
 
 // Colors: Buttons colors
 $button-default: #ad2320;
 $button-default--hover: #9b1f1c;
 $button-default--active: #8a1c19;
-
 
 // Colors: Backgrounds colors
 $background-default: #ffffff;
@@ -30,6 +31,12 @@ $background-reviews--active: #d9d9d9;
 $background-footer: #615353;
 $background-navigation--hover: #e2e2e2;
 $background-navigation--active: #d9d9d9;
+$background-promo: #353533;
+$border-assortment--hover: #e2e2e2;
+$border-assortment--active: #d9d9d9;
+$background-pagination: #f2f2f2;
+$background-pagination--hover: #f2f2f2;
+$background-pagination--active: #d9d9d9;
 
 // Colors: Border color
 $border-default: #000000;
@@ -38,7 +45,8 @@ $border-controls: #e2e2e2;
 $border-reviews: #cfcfcf;
 $border-header: #e2e2e2;
 $border-navigation: #e2e2e2;
-
+$border-assortment: #e2e2e2;
+$border-pagination: #cfcfcf;
 
 // Media width
 $width-desktop: 1380px;
