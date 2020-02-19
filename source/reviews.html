@@ -41,7 +41,7 @@
                 <p class="schedule-info">Ежедневно: с 9-00 до 19-00</p>
               </div>
             </div>
-            <div class="header__phone phone">
+            <div class="header__phone phone modal__link--messages">
               <svg class="phone__icon" width="19" height="18" viewBox="0 0 19 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg" tittle="Иконка телефона.">
                 <path
@@ -50,7 +50,7 @@
               </svg>
               <a class="phone__link" href="tel:+79624460997">8 962 446 09 97</a>
             </div>
-            <div class="header__toggle">
+            <div class="header__toggle toggle">
               <svg class="header__toggle-icon" width="32" height="21" title="Иконка телефона" viewBox="0 0 32 21"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32" height="3" fill="#AD2320" />
@@ -159,6 +159,7 @@
                 </div>
               </form>
             </div>
+            <a class="header__order button modal__link--recall" href="#">Подарки новым клиентам</a>
           </div>
         </div>
       </div>
@@ -352,6 +353,132 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal modal--popup modal--recall hide">
+    <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+      <h2 class="form__title">Подарки для новых клиентов</h2>
+      <label class="form__phone" for="phone-field-two">
+        <input class="form__field form__phone-field" type="tel" name="phone" id="phone-field-two"
+          placeholder="Номер телефона" required>
+      </label>
+      <label class="form__name" for="name-field-two">
+        <input class="form__field form__name-field" type="text" name="name" id="name-field-two" placeholder="Ваше имя"
+          required>
+      </label>
+      <button class="form__button button" type="submit" title="Кнопка отправить.">Хочу подарок</button>
+      <div class="form__agreement-wrapper">
+        <label class="form__agreement" for="agreement-field-two">
+          <input class="form__agreement-field visually-hidden" type="checkbox" name="agreement" id="agreement-field-two"
+            checked required>
+          <span class="form__check">
+            <svg class="form__check-icon" width="14" height="10" viewBox="0 0 14 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect y="4.30768" width="1.523" height="7.61498" transform="rotate(-45 0 4.30768)" fill="#AD2320" />
+              <rect x="12.9231" width="1.523" height="12.184" transform="rotate(45 12.9231 0)" fill="#AD2320" />
+            </svg>
+          </span>
+        </label>
+        <p class="form__agreement-info">Даю согласие на обработку моих данных, в соответствии с <a
+            class="form__agreement-link" href="#" target="_blank">Пользовательским соглашением</a></p>
+      </div>
+    </form>
+    <button class="modal__close button--close modal__close--recall" type="button" title="Кнопка закрыть модальное окно">
+      <svg width="17" height="17" viewBox="0 0 17 17" title="Иконка закрыть" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect y="1.41422" width="2" height="22" transform="rotate(-45 0 1.41422)" fill="#EFEFEF" />
+        <rect x="15.5564" width="2" height="22" transform="rotate(45 15.5564 0)" fill="#EFEFEF" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="modal modal--popup modal--messages hide">
+    <h3 class="modal__title">Получить консультацию</h3>
+    <ul class="modal__list">
+      <li class="modal__item modal__item--telegram">
+        <a class="modal__link" href="#">Написать в Telegram</a>
+      </li>
+      <li class="modal__item modal__item--whatsapp">
+        <a class="modal__link" href="#">Написать в WhatsApp</a>
+      </li>
+      <li class="modal__item modal__item--recall modal__link--recall">
+        <a class="modal__link" href="#">Заказать звонок</a>
+      </li>
+      <li class="modal__item modal__item--call">
+        <a class="modal__link" href="#">Позвонить</a>
+      </li>
+    </ul>
+    <button class="modal__close button--close modal__close--message" type="button" title="Кнопка закрыть модальное окно">
+      <svg width="17" height="17" viewBox="0 0 17 17" title="Иконка закрыть" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect y="1.41422" width="2" height="22" transform="rotate(-45 0 1.41422)" fill="#EFEFEF" />
+        <rect x="15.5564" width="2" height="22" transform="rotate(45 15.5564 0)" fill="#EFEFEF" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="menu hide">
+    <div class="menu__wrapper">
+      <div class="menu__logo-wrapper">
+      <a class="menu__logo logo" href="#">
+        <img class="logo__image" src="img/icon-logo.svg" width="189" height="50" alt="Логотип сайта Прогресс.">
+      </a>
+    </div>
+      <nav class="navigation menu__navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item navigation__item--toggle">
+            <a class="navigation__link navigation__link--toggle" href="#">Каталог услуг
+              <svg class="navigation__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="1.41422" width="2" height="8" transform="rotate(-45 0 1.41422)" fill="#AD2320" />
+                <rect x="9.89948" width="2" height="8" transform="rotate(45 9.89948 0)" fill="#AD2320" />
+              </svg>
+            </a>
+            <ul class="navigation__list navigation__list--inner hide">
+              <li class="navigation__item">
+                <a class="navigation__link" href="index.html">Жалюзи</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="curtains.html">Рулонные шторы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="shutters.html">Рольставни</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="gates.html">Ворота</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="automation.html">Автоматика</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Шлагбаумы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="video.html">Видеонаблюдение</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="windows.html">Окна</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="aluminum.html">Алюминевые конструкции</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Калькулятор</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="reviews.html">Видео отзывы</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="about.html">О компании</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="slick/slick.min.js"></script>

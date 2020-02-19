@@ -138,3 +138,27 @@
 .navigation__item--toggle:focus .navigation__list--inner {
   display: flex;
 }
+
+@media (max-width: $width-tablet) {
+  .navigation__list--inner {
+    width: 100%;
+  }
+
+  .navigation__link {
+    font-size: 14rem;
+    line-height: 24rem;
+    padding: 12rem 17rem;
+  }
+
+  .navigation__list--inner {
+    position: unset;
+  }
+
+  .navigation__list--inner .navigation__item {
+    background: $background-navigation;
+  }
+
+  .navigation .navigation__item--toggle-active .navigation__icon {
+    transform: rotate(0);
+  }
+}

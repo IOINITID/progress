@@ -41,7 +41,7 @@
                 <p class="schedule-info">Ежедневно: с 9-00 до 19-00</p>
               </div>
             </div>
-            <div class="header__phone phone">
+            <div class="header__phone phone modal__link--messages">
               <svg class="phone__icon" width="19" height="18" viewBox="0 0 19 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg" tittle="Иконка телефона.">
                 <path
@@ -50,7 +50,7 @@
               </svg>
               <a class="phone__link" href="tel:+79624460997">8 962 446 09 97</a>
             </div>
-            <div class="header__toggle">
+            <div class="header__toggle toggle">
               <svg class="header__toggle-icon" width="32" height="21" title="Иконка телефона" viewBox="0 0 32 21"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32" height="3" fill="#AD2320" />
@@ -159,7 +159,7 @@
                 </div>
               </form>
             </div>
-            <a class="header__order button" href="#">Подарки новым клиентам</a>
+            <a class="header__order button modal__link--recall" href="#">Подарки новым клиентам</a>
           </div>
         </div>
       </div>
@@ -282,7 +282,7 @@
                   <span class="product__category">Жалюзи</span>
                   <h3 class="product__name">Вертикальные</h3>
                   <p class="product__cost">от 650 руб</p>
-                  <a class="product__order button" href="#">Заказать</a>
+                  <a class="product__order button modal__link--recall" href="#">Заказать</a>
                 </div>
               </article>
             </li>
@@ -300,7 +300,7 @@
                   <span class="product__category">Жалюзи</span>
                   <h3 class="product__name">Горизонтальные</h3>
                   <p class="product__cost">от 700 руб</p>
-                  <a class="product__order button" href="#">Заказать</a>
+                  <a class="product__order button modal__link--recall" href="#">Заказать</a>
                 </div>
               </article>
             </li>
@@ -318,7 +318,7 @@
                   <span class="product__category">Жалюзи</span>
                   <h3 class="product__name">Плиссе</h3>
                   <p class="product__cost">от 4 350 руб</p>
-                  <a class="product__order button" href="#">Заказать</a>
+                  <a class="product__order button modal__link--recall" href="#">Заказать</a>
                 </div>
               </article>
             </li>
@@ -772,7 +772,7 @@
     </div>
   </footer>
 
-  <div class="modal modal--recall hide">
+  <div class="modal modal--popup modal--recall hide">
     <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
       <h2 class="form__title">Подарки для новых клиентов</h2>
       <label class="form__phone" for="phone-field-two">
@@ -796,7 +796,7 @@
             </svg>
           </span>
         </label>
-        <p class="form__agreement-info">Даю согласие на обработку моих данных,<br> в соответствии с <a
+        <p class="form__agreement-info">Даю согласие на обработку моих данных, в соответствии с <a
             class="form__agreement-link" href="#" target="_blank">Пользовательским соглашением</a></p>
       </div>
     </form>
@@ -809,7 +809,7 @@
     </button>
   </div>
 
-  <div class="modal modal--messages hide">
+  <div class="modal modal--popup modal--messages hide">
     <h3 class="modal__title">Получить консультацию</h3>
     <ul class="modal__list">
       <li class="modal__item modal__item--telegram">
@@ -818,14 +818,14 @@
       <li class="modal__item modal__item--whatsapp">
         <a class="modal__link" href="#">Написать в WhatsApp</a>
       </li>
-      <li class="modal__item modal__item--recall">
+      <li class="modal__item modal__item--recall modal__link--recall">
         <a class="modal__link" href="#">Заказать звонок</a>
       </li>
       <li class="modal__item modal__item--call">
         <a class="modal__link" href="#">Позвонить</a>
       </li>
     </ul>
-    <button class="modal__close modal__close--message" type="button" title="Кнопка закрыть модальное окно">
+    <button class="modal__close button--close modal__close--message" type="button" title="Кнопка закрыть модальное окно">
       <svg width="17" height="17" viewBox="0 0 17 17" title="Иконка закрыть" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <rect y="1.41422" width="2" height="22" transform="rotate(-45 0 1.41422)" fill="#EFEFEF" />
@@ -834,37 +834,69 @@
     </button>
   </div>
 
-  <!-- <div class="menu hide">
+  <div class="menu hide">
     <div class="menu__wrapper">
+      <div class="menu__logo-wrapper">
+      <a class="menu__logo logo" href="#">
+        <img class="logo__image" src="img/icon-logo.svg" width="189" height="50" alt="Логотип сайта Прогресс.">
+      </a>
+    </div>
       <nav class="navigation menu__navigation">
         <ul class="navigation__list">
-          <li class="navigation__item navigation__item--active">
-            <a class="navigation__link" href="about.html">О компании</a>
+          <li class="navigation__item navigation__item--toggle">
+            <a class="navigation__link navigation__link--toggle" href="#">Каталог услуг
+              <svg class="navigation__icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="1.41422" width="2" height="8" transform="rotate(-45 0 1.41422)" fill="#AD2320" />
+                <rect x="9.89948" width="2" height="8" transform="rotate(45 9.89948 0)" fill="#AD2320" />
+              </svg>
+            </a>
+            <ul class="navigation__list navigation__list--inner hide">
+              <li class="navigation__item">
+                <a class="navigation__link" href="index.html">Жалюзи</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="curtains.html">Рулонные шторы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="shutters.html">Рольставни</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="gates.html">Ворота</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="automation.html">Автоматика</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="#">Шлагбаумы</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="video.html">Видеонаблюдение</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="windows.html">Окна</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="aluminum.html">Алюминевые конструкции</a>
+              </li>
+            </ul>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="reviews.html">Отзывы</a>
+            <a class="navigation__link" href="#">Калькулятор</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="reviews.html">Видео отзывы</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="about.html">О компании</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="contacts.html">Контакты</a>
           </li>
         </ul>
       </nav>
-      <div class="menu__info">
-        <div class="container">
-          <div class="phone">
-            <svg class="phone__icon" width="24" height="24" title="Иконка телефона">
-              <use xlink:href="#icon-phone-menu"></use>
-            </svg>
-            <a class="phone__number" href="tel:+79682682343">+7 968 268 23 43</a>
-          </div>
-          <address class="address">
-            <img class="address__icon" src="img/icon-map-menu.svg" alt="Иконка карты.">
-            <p class="address__text">г. Михайловск на ул. Почтовая 2/2</p>
-          </address>
-        </div>
-      </div>
     </div>
-  </div> -->
+  </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="slick/slick.min.js"></script>
