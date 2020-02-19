@@ -1,5 +1,5 @@
-.slider__item {
-  display: flex !important; // Исключительно для слайдера slick
+.slider__item.slick-slide {
+  display: flex;
 }
 
 .slider__image {
@@ -102,6 +102,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: none;
   cursor: pointer;
 }
 
@@ -122,10 +123,61 @@
   align-items: center;
   justify-content: center;
   transform: rotate(180deg);
+  background-color: none;
   cursor: pointer;
 }
 
 .slider__controls-next:hover,
 .slider__controls-next:focus {
   background-color: $background-controls;
+}
+
+@media (max-width: $width-tablet) {
+  .slider {}
+
+  .slider__image {
+    margin-right: 0;
+    max-width: unset;
+    min-width: unset;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25rem;
+  }
+
+  .slider__list {
+    margin-top: 47rem;
+  }
+
+  .slider__item {
+    flex-direction: column;
+    margin-bottom: 35rem;
+  }
+
+  .slider__title {
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 23rem;
+    text-align: center;
+    margin-bottom: 25rem;
+  }
+
+  .slider__controls {
+    display: none;
+  }
+
+  .slider__info {
+    height: 320rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product__filter {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #ffffff 0%, transparent 100%);
+  }
 }

@@ -54,3 +54,9 @@
   width: 403rem;
   height: 462rem;
 }
+
+@media (max-width: $width-tablet) {
+  .call {
+    display: none;
+  }
+}

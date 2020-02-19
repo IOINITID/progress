@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-.header__bottom {
+.header__bottom-wrapper {
   display: flex;
   min-height: 49rem;
 }
@@ -30,4 +30,44 @@
 
 .header__shedule {
   margin-left: auto;
+}
+
+.header--small .header__promo {
+  display: none;
+}
+
+.header--small .header__bottom {
+  box-shadow: 0px 4px 8px rgba($color: $background-shadow, $alpha: 0.1);
+}
+
+.header__toggle {
+  display: none;
+}
+
+.header__order.button {
+  display: none;
+}
+
+@media (max-width: $width-tablet) {
+  .header__bottom {
+    display: none;
+  }
+
+  .header__top-wrapper {
+    min-height: unset;
+    height: 50rem;
+    justify-content: space-between;
+  }
+
+  .header__toggle {
+    display: flex;
+  }
+
+  .header__toggle-icon {
+    width: 32rem;
+    height: 21rem;
+  }
+  .header__order.button {
+    display: flex;
+  }
 }

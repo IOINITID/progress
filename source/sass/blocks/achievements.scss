@@ -33,3 +33,28 @@
   margin: 0;
   text-align: center;
 }
+
+@media (max-width: $width-tablet) {
+  .achievements {
+    margin-bottom: 37rem;
+  }
+
+  .achievements__item.slick-slide {
+    display: flex;
+  }
+
+  .achievements__icon {
+    width: 169rem;
+    height: 200rem;
+    margin-bottom: 23rem;
+  }
+
+  .achievements__text {
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 30rem;
+    text-align: center;
+    color: $text-default;
+    margin-bottom: 25rem;
+  }
+}

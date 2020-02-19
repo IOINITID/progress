@@ -7,3 +7,20 @@
 .modal__form {
   padding: 37rem 30rem 46rem 30rem;
 }
+
+.modal--recall {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal--recall .form__title {
+  padding: 0 40rem;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

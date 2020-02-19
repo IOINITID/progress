@@ -64,3 +64,38 @@
 .reviews__button:active {
   background: $background-reviews--active;
 }
+
+@media (max-width: $width-tablet) {
+.reviews {
+  margin-top: 32rem;
+  margin-bottom: 36rem;
+}
+
+  .reviews__title {
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 30rem;
+    margin-bottom: 35rem;
+  }
+
+  .reviews__item {
+    width: 280rem;
+    height: 176rem;
+    margin-right: 0;
+    margin-bottom: 20rem;
+  }
+
+  .reviews__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .reviews__list {
+    margin-bottom: 35rem;
+  }
+
+  .reviews__button {
+    width: 100%;
+    min-height: unset;
+    height: 42rem;
+  }
+}

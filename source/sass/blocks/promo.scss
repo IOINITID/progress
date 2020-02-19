@@ -1,6 +1,8 @@
 .promo {
   background: $background-promo;
   background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 870rem;
 }
 
@@ -63,4 +65,35 @@
 
 .promo__modal {
   margin-top: 165rem;
+}
+
+@media (max-width: $width-tablet) {
+  .promo {
+    min-height: auto;
+    padding-top: 156rem;
+    padding-bottom: 54rem;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .promo__wrapper {
+    flex-direction: column;
+  }
+
+  .promo__modal {
+    display: none;
+  }
+
+  .promo__title {
+    width: auto;
+    height: auto;
+    font-weight: 400;
+    font-size: 28rem;
+    line-height: 36rem;
+    text-align: center;
+    color: $text-additional;
+    margin-top: 0;
+    margin-bottom: 150rem;
+  }
 }

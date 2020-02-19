@@ -31,3 +31,23 @@
 .goods__item:nth-child(3n) {
   margin-right: 0;
 }
+
+@media (max-width: $width-tablet) {
+  .goods {
+    margin-bottom: 47rem;
+  }
+
+  .goods__title {
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 30rem;
+    color: $text-default;
+    margin: 0;
+    margin-bottom: 41rem;
+  }
+
+  .goods__item {
+    margin-right: 0;
+    width: 100%;
+  }
+}

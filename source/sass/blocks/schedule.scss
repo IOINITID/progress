@@ -30,3 +30,9 @@
   margin: 0;
   font-weight: 500;
 }
+
+@media (max-width: $width-tablet) {
+  .schedule {
+    display: none;
+  }
+}

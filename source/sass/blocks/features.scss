@@ -46,3 +46,47 @@
   margin: 0;
   text-align: center;
 }
+
+@media (max-width: $width-tablet) {
+  .features {
+    padding-top: 38rem;
+    padding-bottom: 44rem;
+  }
+
+  .features__wrappper {
+    width: 100%;
+  }
+
+  .features__title {
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 30rem;
+    color: $text-default;
+    margin-bottom: 35rem;
+  }
+
+  .features__text {
+    font-weight: 500;
+    font-size: 18rem;
+    line-height: 18rem;
+    margin-bottom: 43rem;
+  }
+
+  .features__list.slick-dotted.slick-slider {
+    margin: 0;
+  }
+
+  .features__item {
+    margin: 0;
+  }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features .slick-dots li button {
+    background: $background-dot;
+  }
+}

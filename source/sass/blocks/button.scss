@@ -27,3 +27,23 @@
 .button:active {
   background: $button-default--active;
 }
+
+.button--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60rem;
+  height: 60rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button--close:hover,
+.button--close:focus {
+  background-color: $background-close--hover;
+}
+
+.button--close:hover rect,
+.button--close:focus rect {
+  fill: $background-default;
+}

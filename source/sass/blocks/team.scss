@@ -65,3 +65,32 @@
   color: $text-position;
   margin: 0;
 }
+
+@media (max-width: $width-tablet) {
+  .team {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 35rem;
+  }
+
+  .team__title {
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 30rem;
+    margin: 0;
+    margin-bottom: 35rem;
+  }
+
+  .team__item {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team__image-wrapper {
+    width: 221rem;
+    height: 221rem;
+    margin-bottom: 35rem;
+  }
+}

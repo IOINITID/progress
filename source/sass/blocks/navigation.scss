@@ -83,6 +83,8 @@
   z-index: 1;
   left: 0;
   display: none;
+  border-left: 1rem solid $border-navigation;
+  border-right: 1rem solid $border-navigation;
 }
 
 .navigation__list--inner .navigation__item .navigation__link,
