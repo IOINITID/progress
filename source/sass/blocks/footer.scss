@@ -90,6 +90,10 @@
   flex-direction: column;
 }
 
+.footer__copyright {
+  display: none;
+}
+
 @media (max-width: $width-tablet) {
   .footer {
     min-height: unset;
@@ -156,5 +160,9 @@
     line-height: 18rem;
     color: $text-copyright;
     margin: 0;
+  }
+
+  .footer__copyright {
+    display: flex;
   }
 }

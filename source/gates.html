@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ворота</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="slick/slick-theme.css">
   <link rel="stylesheet" href="slick/slick.css">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
       <div class="header__top">
         <div class="container">
           <div class="header__top-wrapper">
-            <a class="header__logo logo" href="index.html">
+            <a href="index.html" class="header__logo logo">
               <picture>
                 <source media="(max-width: 768px)" srcset="img/icon-logo-mobile.svg">
                 <img class="logo__image" src="img/icon-logo.svg" width="189" height="50" alt="Логотип сайта Прогресс.">
@@ -49,6 +49,14 @@
                   fill="#AB2420" />
               </svg>
               <a class="phone__link" href="tel:+79624460997">8 962 446 09 97</a>
+            </div>
+            <div class="header__toggle">
+              <svg class="header__toggle-icon" width="32" height="21" title="Иконка телефона" viewBox="0 0 32 21"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="3" fill="#AD2320" />
+                <rect y="9" width="32" height="3" fill="#AD2320" />
+                <rect y="18" width="32" height="3" fill="#AD2320" />
+              </svg>
             </div>
           </div>
         </div>
@@ -164,7 +172,7 @@
     <section class="achievements">
       <div class="container">
         <div class="achievements__wrapper">
-          <ul class="achievements__list">
+          <ul class="achievements__list slider-achievements">
             <li class="achievements__item">
               <svg class="achievements__icon" width="85" height="100" viewBox="0 0 85 100" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -280,7 +288,7 @@
               </li>
             </ul>
           </div>
-          <ul class="goods__list">
+          <ul class="goods__list slider-goods">
             <li class="goods__item">
               <article class="product">
                 <header class="product__header">
@@ -334,7 +342,7 @@
             </li>
           </ul>
           <div class="product__slider slider">
-            <ul class="slider__list slider-goods">
+            <ul class="slider__list slider-products">
               <li class="slider__item">
                 <picture>
                   <source srcset="img/slider-gates-first.webp" type="image/webp">
@@ -360,6 +368,7 @@
                       </dl>
                     </li>
                   </ul>
+                  <div class="product__filter"></div>
                 </div>
               </li>
               <li class="slider__item">
@@ -387,6 +396,7 @@
                       </dl>
                     </li>
                   </ul>
+                  <div class="product__filter"></div>
                 </div>
               </li>
               <li class="slider__item">
@@ -420,9 +430,18 @@
                       </dl>
                     </li>
                   </ul>
+                  <div class="product__filter"></div>
                 </div>
               </li>
             </ul>
+            <a class="product__more" href="#">
+              <span class="product__more-title">Развернуть</span>
+              <svg class="product__more-icon" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect y="1" width="1.4142" height="9.89937" transform="rotate(-45 0 1)" fill="#AD2320" />
+                <rect x="13" width="1.4142" height="9.89937" transform="rotate(45 13 0)" fill="#AD2320" />
+              </svg>
+            </a>
             <ul class="slider__controls">
               <button class="slider__controls-prev" type="button" title="Кнопка предыдущий слайд.">
                 <svg class="slider__controls-icon" width="14" height="25" viewBox="0 0 14 25" fill="none"
@@ -450,7 +469,7 @@
       <div class="container">
         <div class="features__wrappper">
           <h2 class="features__title">Наши преимущества</h2>
-          <ul class="features__list">
+          <ul class="features__list slider-features">
             <li class="features__item">
               <svg class="features__icon" width="195" height="200" viewBox="0 0 195 200" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -536,59 +555,37 @@
           <h2 class="stages__title">Этапы работ</h2>
           <ul class="stages__list">
             <li class="stages__item">
-              <svg class="stages__icon" width="191" height="191" viewBox="0 0 191 191" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <circle cx="95.5" cy="95.5" r="95" fill="white" stroke="#AD2320" />
-                <path
-                  d="M136 65H56V117.243H79.862V125.497C79.862 127.697 80.5214 129.815 81.7687 131.622L87.568 140.028C89.7161 143.141 93.2509 145 97.0239 145H109.952C118.659 145 125.742 137.89 125.742 129.152V117.242H136V65ZM60.6875 69.7047H70.0625V112.538H60.6875V69.7047ZM121.055 129.152C121.055 135.296 116.074 140.295 109.952 140.295H97.0239C94.7886 140.295 92.6944 139.194 91.4217 137.35L85.6225 128.944C84.9206 127.927 84.5495 126.735 84.5495 125.497V114.184L86.9994 111.68V122.426H91.6869V88.5311C91.6869 87.4725 92.545 86.6112 93.5997 86.6112C94.6544 86.6112 95.5125 87.4725 95.5125 88.5311L95.5153 112.784H100.203V103.894C100.203 102.836 101.061 101.975 102.116 101.975C103.17 101.975 104.028 102.836 104.028 103.894V112.784H108.716V104.162C108.716 103.104 109.574 102.243 110.629 102.243C111.683 102.243 112.542 103.104 112.542 104.162V112.784H117.229V107.378C117.229 106.319 118.087 105.458 119.142 105.458C120.197 105.458 121.055 106.319 121.055 107.378V129.152H121.055ZM100.2 96.6228V88.5311C100.2 84.8783 97.2391 81.9067 93.5997 81.9067C89.9603 81.9067 86.9994 84.8784 86.9994 88.5311V96.6344C84.7602 94.7442 83.3342 91.9134 83.3342 88.7537C83.3342 83.0755 87.937 78.4558 93.5947 78.4558C99.2523 78.4558 103.855 83.0755 103.855 88.7537C103.855 91.908 102.433 94.733 100.2 96.6228ZM119.142 100.753C118.23 100.753 117.36 100.94 116.569 101.278C115.499 99.0661 113.238 97.5378 110.629 97.5378C109.081 97.5378 107.658 98.0766 106.531 98.975C106.153 98.633 105.736 98.3342 105.287 98.0863C107.322 95.5227 108.542 92.2791 108.542 88.7534C108.542 80.4809 101.837 73.7509 93.5945 73.7509C85.3522 73.7509 78.6466 80.4811 78.6466 88.7534C78.6466 94.6509 82.0559 99.7623 86.9992 102.212V104.964L79.8619 112.538H74.75V69.7047H121.156V101.07C120.521 100.865 119.844 100.753 119.142 100.753ZM131.312 112.538H125.844V69.7047H131.312V112.538Z"
-                  fill="#AD2320" />
-                <path d="M67.7969 88.8083H63.1875V93.4346H67.7969V88.8083Z" fill="#AD2320" />
-                <circle cx="151" cy="18" r="15" fill="#AD2320" />
-                <path d="M150.204 24H152.4V11.31H150.852L147.468 12.39L147.936 14.19L150.204 13.56V24Z" fill="white" />
-              </svg>
-              <h3 class="stages__text">Заявка</h3>
-              <p class="stages__info">Вы оставляете заявку на сайте</p>
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/icon-stage-first-mobile.svg">
+                <img class="stages__icon" src="img/icon-stages-first.svg" width="191" height="191"
+                  alt="Иконка этапов работ.">
+              </picture>
+              <div class="stages__info">
+                <h3 class="stages__text">Заявка</h3>
+                <p class="stages__info">Вы оставляете заявку на сайте</p>
+              </div>
             </li>
             <li class="stages__item">
-              <svg class="stages__icon" width="191" height="191" viewBox="0 0 191 191" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <circle cx="95.5" cy="95.5" r="95" fill="white" stroke="#AD2320" />
-                <path
-                  d="M113.525 71.0521V68.7102C113.525 64.8363 110.373 61.6838 106.499 61.6838C105.585 61.6838 104.712 61.8596 103.91 62.1782C103.097 59.1979 100.365 57 97.1306 57C93.8958 57 91.1644 59.1979 90.3508 62.1782C89.5494 61.859 88.676 61.6838 87.7623 61.6838C84.5275 61.6838 81.7961 63.8817 80.9832 66.8621C80.1818 66.5435 79.3083 66.3683 78.394 66.3683C75.3411 66.3683 72.7379 68.3263 71.7711 71.0521H62V89.7887H71.3683V96.2621C71.3683 100.096 72.2881 104.047 73.9574 107.386C75.3282 110.127 76.0521 113.196 76.0521 116.26V136.942H108.841C108.841 133.315 108.841 122.337 108.841 118.586C108.841 115.127 111.072 111.968 114.266 110.903C119.426 109.183 122.894 104.372 122.894 98.933V89.7887H125.866L142 80.4204L125.866 71.0521H113.525ZM66.6838 85.1049V75.7366H71.3683V85.1049H66.6838ZM122.894 75.7366V85.1049H113.523V75.7366H122.894ZM104.157 132.258H99.4725V127.574H94.7887V132.258H80.7366V122.89H104.157V132.258ZM118.209 98.933C118.209 102.353 116.029 105.378 112.784 106.459C107.823 108.113 104.325 112.909 104.164 118.205H80.7366V116.26C80.7366 112.472 79.8412 108.68 78.1475 105.292C76.7961 102.59 76.0521 99.3828 76.0521 96.2621V73.394C76.0521 72.1031 77.1031 71.0521 78.394 71.0521C79.6855 71.0521 80.7366 72.1031 80.7366 73.394V82.7623H85.4204V68.7102C85.4204 67.4187 86.4708 66.3683 87.7623 66.3683C89.0538 66.3683 90.1049 67.4187 90.1049 68.7102V78.0785H94.7887V64.0264C94.7887 62.7349 95.8391 61.6838 97.1306 61.6838C98.4221 61.6838 99.4725 62.7349 99.4725 64.0264V82.7623H104.157V68.7102C104.157 67.4187 105.207 66.3683 106.499 66.3683C107.79 66.3683 108.841 67.4187 108.841 68.7102V89.7887H118.209V98.933ZM127.577 83.3788V77.4626L132.672 80.4204L127.577 83.3788Z"
-                  fill="#AD2320" />
-                <circle cx="151" cy="18" r="15" fill="#AD2320" />
-                <path
-                  d="M145.882 24H154.99V22.056H148.996L151.588 19.896C153.802 18.06 154.864 16.998 154.864 15.018C154.864 12.732 153.172 11.22 150.706 11.22C148.456 11.22 147.268 12.174 146.062 13.866L147.628 15.09C148.6 13.83 149.392 13.2 150.544 13.2C151.696 13.2 152.578 13.92 152.578 15.162C152.578 16.296 151.948 17.106 150.22 18.564L145.882 22.254V24Z"
-                  fill="white" />
-              </svg>
-              <h3 class="stages__text">Замер</h3>
-              <p class="stages__info">Замерщик приезжает к Вам с каталогами и снимает размеры</p>
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/icon-stage-second-mobile.svg">
+                <img class="stages__icon" src="img/icon-stages-second.svg" width="191" height="191"
+                  alt="Иконка этапов работ.">
+              </picture>
+              <div class="stages__info">
+                <h3 class="stages__text">Замер</h3>
+                <p class="stages__info">Замерщик приезжает к Вам с каталогами и снимает размеры</p>
+              </div>
             </li>
             <li class="stages__item">
-              <svg class="stages__icon" width="191" height="191" viewBox="0 0 191 191" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <circle cx="95.5" cy="95.5" r="95" fill="white" stroke="#AD2320" />
-                <path
-                  d="M56.0092 69.2582L122.751 136L136 122.751L69.2581 56.0093L56.0092 69.2582ZM69.2581 62.6334L82.6577 76.0337L76.033 82.6584L62.6333 69.2582L69.2581 62.6334ZM122.751 129.375L79.3453 85.9702L85.9701 79.3455L129.375 122.751L122.751 129.375Z"
-                  fill="#AD2320" />
-                <path
-                  d="M60.6844 102.999H65.3683V98.3146H70.0527V93.6301H65.3683V88.9463H60.6844V93.6301H56V98.3146H60.6844V102.999Z"
-                  fill="#AD2320" />
-                <path
-                  d="M117.052 79.5771V74.8933H121.736V70.2089H117.052V65.5244H112.367V70.2089H107.683V74.8933H112.367V79.5771H117.052Z"
-                  fill="#AD2320" />
-                <path
-                  d="M84.2617 63.0264C84.2617 66.9009 87.4136 70.0527 91.2881 70.0527C95.1626 70.0527 98.3145 66.9009 98.3145 63.0264C98.3145 59.1519 95.1626 56 91.2881 56C87.4136 56 84.2617 59.1519 84.2617 63.0264ZM93.63 63.0264C93.63 64.3179 92.5796 65.3683 91.2881 65.3683C89.9966 65.3683 88.9462 64.3179 88.9462 63.0264C88.9462 61.7349 89.9966 60.6844 91.2881 60.6844C92.5796 60.6844 93.63 61.7349 93.63 63.0264Z"
-                  fill="#AD2320" />
-                <path d="M102.999 79.5771H107.683V84.2616H102.999V79.5771Z" fill="#AD2320" />
-                <path d="M74.8934 98.3145H79.5773V102.999H74.8934V98.3145Z" fill="#AD2320" />
-                <circle cx="151" cy="18" r="15" fill="#AD2320" />
-                <path
-                  d="M151.598 24.216C154.208 24.216 156.008 22.56 156.008 20.238C156.008 17.97 154.298 16.944 152.3 16.656L155.81 13.056V11.4H147.476V13.326H152.93L149.528 16.944L149.888 18.33H150.914C152.678 18.33 153.812 19.032 153.812 20.274C153.812 21.462 152.876 22.218 151.634 22.218C150.23 22.218 149.222 21.624 148.322 20.562L146.774 22.002C147.836 23.298 149.402 24.216 151.598 24.216Z"
-                  fill="white" />
-              </svg>
-              <h3 class="stages__text">Установка</h3>
-              <p class="stages__info">После изготовления наши мастера надежно монтируют изделия</p>
+              <picture>
+                <source media="(max-width: 768px)" srcset="img/icon-stage-third-mobile.svg">
+                <img class="stages__icon" src="img/icon-stages-third.svg" width="191" height="191"
+                  alt="Иконка этапов работ.">
+              </picture>
+              <div class="stages__info">
+                <h3 class="stages__text">Установка</h3>
+                <p class="stages__info">После изготовления наши мастера надежно монтируют изделия</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -637,7 +634,7 @@
       <div class="container">
         <div class="team__wrapper">
           <h2 class="team__title">Наша команда</h2>
-          <ul class="team__list">
+          <ul class="team__list slider-team">
             <li class="team__item">
               <div class="team__image-wrapper">
                 <img class="team__image" src="https://picsum.photos/512/512?random=1" alt="Фото менеджера по продажам.">
@@ -677,16 +674,22 @@
           <h2 class="reviews__title">Отзывы о нас</h2>
           <ul class="reviews__list">
             <li class="reviews__item">
-              <iframe src="" frameborder="0"></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/7KXGZAEWzn0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </li>
             <li class="reviews__item">
-              <iframe src="" frameborder="0"></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/7KXGZAEWzn0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </li>
             <li class="reviews__item">
-              <iframe src="" frameborder="0"></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/7KXGZAEWzn0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </li>
           </ul>
-          <a class="reviews__button button" href="#">Смотреть все отзывы</a>
+          <a class="reviews__button button" href="reviews.html">Смотреть все отзывы</a>
         </div>
       </div>
     </section>
@@ -700,31 +703,31 @@
         <div class="footer__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Жалюзи</a>
+              <a class="navigation__link" href="index.html">Жалюзи</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Калькулятор</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Рулонные шторы</a>
+              <a class="navigation__link" href="curtains.html">Рулонные шторы</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Видео отзывы</a>
+              <a class="navigation__link" href="reviews.html">Видео отзывы</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Рольставни</a>
+              <a class="navigation__link" href="shutters.html">Рольставни</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">О компании</a>
+              <a class="navigation__link" href="about.html">О компании</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Ворота</a>
+              <a class="navigation__link" href="gates.html">Ворота</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Контакты</a>
+              <a class="navigation__link" href="curtains.html">Контакты</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link" href="#">Автоматика</a>
+              <a class="navigation__link" href="automation.html">Автоматика</a>
             </li>
           </ul>
         </div>
@@ -756,6 +759,10 @@
             <a class="phone__link" href="tel:+79624460997">8 962 446 09 97</a>
           </div>
           <a class="footer__order button" href="#">Заказать замер</a>
+        </div>
+
+        <div class="footer__copyright">
+          <p class="footer__copyright-text">Copyright © 2013-2020 Freepik Company S.L. All rights reserved.</p>
         </div>
 
       </div>

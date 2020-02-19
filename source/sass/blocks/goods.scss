@@ -50,4 +50,16 @@
     margin-right: 0;
     width: 100%;
   }
+
+  .goods--product {
+    margin-bottom: 35rem;
+  }
+
+  .goods--product .goods__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .goods--product .goods__list {
+    margin-bottom: 35rem;
+  }
 }

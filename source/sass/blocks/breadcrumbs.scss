@@ -29,3 +29,9 @@
   text-align: center;
   color: $text-breadcrumbs;
 }
+
+@media (max-width: $width-tablet) {
+  .breadcrumbs {
+    margin-bottom: 35rem;
+  }
+}

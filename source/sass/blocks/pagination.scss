@@ -48,3 +48,15 @@
   color: $text-pagination;
   text-decoration: none;
 }
+
+@media (max-width: $width-tablet) {
+  .pagination__item {
+    width: 42rem;
+    height: 42rem;
+    margin-right: 6rem;
+  }
+
+  .pagination__list {
+    margin-bottom: 35rem;
+  }
+}

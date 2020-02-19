@@ -23,16 +23,16 @@
 
 .contacts__item {
   margin-right: 51rem;
-font-size: 16rem;
-line-height: 30rem;
-color: $text-default;
+  font-size: 16rem;
+  line-height: 30rem;
+  color: $text-default;
 
 }
 
 .contacts__address {
   display: flex;
-align-items: center;
-font-style: inherit;
+  align-items: center;
+  font-style: inherit;
 }
 
 .contacts__icon {
@@ -74,4 +74,51 @@ font-style: inherit;
 .contacts__phone-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: $width-tablet) {
+  .contacts {
+    margin-top: 35rem;
+  }
+
+  .contacts__title {
+    font-weight: 500;
+    font-size: 24rem;
+    line-height: 30rem;
+    margin-bottom: 35rem;
+  }
+
+  .contacts__list {
+    flex-direction: column;
+  }
+
+  .contacts__item {
+    margin: 0;
+    margin-bottom: 56rem;
+  }
+
+  .contacts__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .contacts__icon {
+    margin: 0;
+    margin-bottom: 6rem;
+  }
+
+  .contacts__address-wrapper {
+    text-align: center;
+  }
+
+  .contacts__phone-wrapper {
+    text-align: center;
+  }
+
+  .contacts__address {
+    flex-direction: column;
+  }
+
+  .contacts__phone {
+    flex-direction: column;
+  }
 }

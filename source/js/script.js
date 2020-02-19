@@ -64,8 +64,8 @@ $('.slider-team').slick({
 // Dropdown product items
 var productInfo = document.querySelectorAll('.slider__item:not(.slick-cloned)');
 var productInfoShowButton = document.querySelector('.product__more');
-var productInfoShowText = productInfoShowButton.querySelector('.product__more-title');
-var productInfoShowIcon = productInfoShowButton.querySelector('.product__more-icon');
+var productInfoShowText = document.querySelector('.product__more-title');
+var productInfoShowIcon = document.querySelector('.product__more-icon');
 var productFilter = document.querySelectorAll('.product__filter');
 var sliderDescription = document.querySelectorAll('.slider__info');
 

@@ -1,26 +1,40 @@
+body .slick-initialized .slick-slide {
+  display: flex;
+}
+
 @media (max-width: $width-tablet) {
-  .slick-dots {
+  body .slick-dots {
     position: unset;
     display: block;
     margin-bottom: 0;
   }
 
-  .slick-dots li button {
+  body .slick-dots li button {
     border-radius: 50%;
     background-color: #f2f2f2;
   }
 
-  .slick-dots li button::before {
+  body .slick-dots li button::before {
     font-size: 16rem;
     line-height: 22rem;
     opacity: 0;
     color: transparent;
   }
 
-  .slick-dots li.slick-active button::before {
+  body .slick-dots li.slick-active button::before {
     font-size: 16rem;
     line-height: 22rem;
     opacity: 1;
     color: #ad2320;
+  }
+
+  body .slick-initialized .slick-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body .slider__item .slick-slide {
+    display: flex;
   }
 }
