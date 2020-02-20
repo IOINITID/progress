@@ -26,6 +26,11 @@
   justify-content: center;
 }
 
+.modal__close-icon {
+  width: 17rem;
+  height: 17rem;
+}
+
 @media (max-width: $width-tablet) {
   .modal {
     width: 100%;

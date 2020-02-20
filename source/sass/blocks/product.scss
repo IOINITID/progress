@@ -226,10 +226,6 @@
     background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-  .product__name {
-    // font-size: 17rem;
-  }
-
   .product__description {
     min-height: unset;
   }
@@ -241,5 +237,9 @@
   .product__more {
     display: flex;
     width: auto;
+  }
+
+  .product--detail .product__more {
+    width: 100%;
   }
 }

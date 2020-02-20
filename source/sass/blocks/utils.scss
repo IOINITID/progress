@@ -7,11 +7,20 @@ body .slick-initialized .slick-slide {
     position: unset;
     display: block;
     margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   body .slick-dots li button {
     border-radius: 50%;
     background-color: #f2f2f2;
+    width: 20rem;
+    height: 20rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   body .slick-dots li button::before {
@@ -19,6 +28,10 @@ body .slick-initialized .slick-slide {
     line-height: 22rem;
     opacity: 0;
     color: transparent;
+    width: 20rem;
+    height: 20rem;
+    position: unset;
+    line-height: 1.4;
   }
 
   body .slick-dots li.slick-active button::before {
@@ -26,6 +39,8 @@ body .slick-initialized .slick-slide {
     line-height: 22rem;
     opacity: 1;
     color: #ad2320;
+     position: unset;
+     line-height: 1.4;
   }
 
   body .slick-initialized .slick-slide {
@@ -36,5 +51,11 @@ body .slick-initialized .slick-slide {
 
   body .slider__item .slick-slide {
     display: flex;
+  }
+
+  body .slick-dots li {
+    width: 20rem;
+    height: 20rem;
+    margin: 5rem;
   }
 }
