@@ -142,6 +142,14 @@
   display: none;
 }
 
+.product--detail .product__filter {
+  display: flex;
+}
+
+.product--detail .product__more {
+  display: flex;
+}
+
 @media (max-width: $width-tablet - 1) {
   .product {
     width: 100%;
