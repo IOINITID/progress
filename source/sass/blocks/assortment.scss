@@ -54,7 +54,7 @@
   display: none;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .assortment {
     margin-top: 35rem;
     margin-bottom: 25rem;

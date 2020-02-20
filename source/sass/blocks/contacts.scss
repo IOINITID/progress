@@ -3,8 +3,6 @@
   margin-bottom: 31rem;
 }
 
-.contacts__wrapper {}
-
 .contacts__title {
   font-weight: 500;
   font-size: 48rem;
@@ -76,7 +74,7 @@
   flex-direction: column;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .contacts {
     margin-top: 35rem;
   }

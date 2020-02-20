@@ -3,18 +3,14 @@
   margin-bottom: 80rem;
 }
 
-.breadcrumbs__wrapper {}
-
 .breadcrumbs__list {
   @include list-reset;
   display: flex;
 }
 
-.breadcrumbs__item {}
-
 .breadcrumbs__item::after {
   content: "/";
-  margin: 0 4px;
+  margin: 0 4rem;
 }
 
 .breadcrumbs__item:last-child::after {
@@ -30,7 +26,7 @@
   color: $text-breadcrumbs;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .breadcrumbs {
     margin-bottom: 35rem;
   }

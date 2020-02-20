@@ -34,7 +34,7 @@
   text-align: center;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .achievements {
     margin-bottom: 37rem;
   }

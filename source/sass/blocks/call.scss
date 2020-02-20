@@ -56,7 +56,7 @@
   height: 462rem;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .call {
     display: none;
     width: auto;

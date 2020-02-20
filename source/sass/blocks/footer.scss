@@ -11,8 +11,6 @@
   align-items: flex-start;
 }
 
-.footer__navigation {}
-
 .footer__navigation .navigation__list {
   display: flex;
   flex-wrap: wrap;
@@ -95,7 +93,7 @@
   display: none;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .footer {
     min-height: unset;
     padding-top: 28rem;
@@ -151,9 +149,6 @@
     min-height: unset;
     height: 50rem;
     margin-bottom: 42rem;
-  }
-
-  .footer__copyright {
   }
 
   .footer__copyright-text {

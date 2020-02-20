@@ -1,9 +1,6 @@
 .goods {
-  // padding-bottom: 80rem;
   margin-bottom: 80rem;
 }
-
-.goods__wrapper {}
 
 .goods__title {
   margin: 0;
@@ -32,7 +29,7 @@
   margin-right: 0;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .goods {
     margin-bottom: 47rem;
   }

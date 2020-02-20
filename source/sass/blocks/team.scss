@@ -3,8 +3,6 @@
   margin-bottom: 36rem;
 }
 
-.team__wrapper {}
-
 .team__title {
   font-weight: 500;
   font-size: 48rem;
@@ -66,7 +64,7 @@
   margin: 0;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .team {
     padding-top: 0;
     padding-bottom: 0;

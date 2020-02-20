@@ -140,7 +140,7 @@
   display: flex;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .navigation__list--inner {
     width: 100%;
   }

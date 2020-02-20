@@ -32,7 +32,7 @@
   white-space: nowrap;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .schedule {
     display: none;
   }

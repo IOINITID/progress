@@ -118,7 +118,7 @@
   margin-top: 165rem;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .promo {
     min-width: auto;
     min-height: auto;

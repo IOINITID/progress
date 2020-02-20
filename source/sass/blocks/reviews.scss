@@ -3,8 +3,6 @@
   margin-bottom: 50rem;
 }
 
-.reviews__wrapper {}
-
 .reviews__title {
   font-weight: 500;
   font-size: 48rem;
@@ -38,7 +36,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  // object-fit: cover;
   border: none;
   border-radius: 4rem;
 }
@@ -65,11 +62,11 @@
   background: $background-reviews--active;
 }
 
-@media (max-width: $width-tablet) {
-.reviews {
-  margin-top: 32rem;
-  margin-bottom: 36rem;
-}
+@media (max-width: $width-tablet - 1) {
+  .reviews {
+    margin-top: 32rem;
+    margin-bottom: 36rem;
+  }
 
   .reviews__title {
     font-weight: 500;

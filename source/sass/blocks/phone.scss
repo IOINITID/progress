@@ -23,7 +23,7 @@
   text-decoration: none;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .phone {
     background: none;
     margin: 0;

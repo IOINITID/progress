@@ -3,8 +3,6 @@
   margin-bottom: 80rem;
 }
 
-.about__wrapper {}
-
 .about__title {
   font-weight: 500;
   font-size: 48rem;
@@ -45,7 +43,7 @@
   margin-right: 5rem;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .about {
     margin-top: 35rem;
     margin-bottom: 35rem;

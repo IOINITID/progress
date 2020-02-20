@@ -60,7 +60,7 @@
   margin: 0;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .stages {
     padding-top: 0;
     padding-bottom: 0;

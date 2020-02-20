@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .features {
     padding-top: 38rem;
     padding-bottom: 44rem;

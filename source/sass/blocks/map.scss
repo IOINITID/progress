@@ -15,7 +15,7 @@
   pointer-events: none;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   .map {
     min-width: auto;
     height: 360rem;

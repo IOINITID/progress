@@ -2,7 +2,7 @@ body .slick-initialized .slick-slide {
   display: flex;
 }
 
-@media (max-width: $width-tablet) {
+@media (max-width: $width-tablet - 1) {
   body .slick-dots {
     position: unset;
     display: block;
@@ -39,8 +39,8 @@ body .slick-initialized .slick-slide {
     line-height: 22rem;
     opacity: 1;
     color: #ad2320;
-     position: unset;
-     line-height: 1.4;
+    position: unset;
+    line-height: 1.4;
   }
 
   body .slick-initialized .slick-slide {
