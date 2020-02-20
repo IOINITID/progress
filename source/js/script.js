@@ -5,8 +5,28 @@ var productInfoShowText = document.querySelector('.product__more-title');
 var productInfoShowIcon = document.querySelector('.product__more-icon');
 var productFilter = document.querySelectorAll('.product__filter');
 var sliderDescription = document.querySelectorAll('.slider__info');
+var htmlItem = document.querySelector('html');
 var isProductShowed = false;
 var deviceWidth = window.innerWidth;
+var desktopWidth = 1300;
+var mobileWidth = 320;
+
+// Get desktop root size
+var getDesktopRootSize = function () {
+  var rootSize = desktopWidth / deviceWidth;
+  return rootSize;
+};
+
+// Get mobile root size
+var getMobileRootSize = function () {
+  var rootSize = deviceWidth / mobileWidth;
+  return rootSize;
+};
+
+// Set root size
+var setRootSize = function (rootFontSize) {
+  htmlItem.style.fontSize = rootFontSize + 'px';
+}
 
 // Init slider for products
 $('.slider-products').slick({
@@ -131,11 +151,16 @@ var sliderDesktopDestroying = function () {
 
 // Slider destroying
 var checkDeviceWidth = function () {
-  if (deviceWidth >= 768) {
+  if (deviceWidth >= 768 && deviceWidth < 1380) {
     sliderMobileDestroying();
+    setRootSize(getDesktopRootSize());
+  } else if (deviceWidth >= 1380) {
+    sliderMobileDestroying();
+    setRootSize(1);
   } else {
     sliderDesktopDestroying();
     sliderDescriptionHide();
+    setRootSize(getMobileRootSize());
   }
 };
 
@@ -150,7 +175,6 @@ var menu = document.querySelector('.menu');
 var menuOpenButton = document.querySelector('.toggle')
 var menuDropdownButton = document.querySelector('.menu__navigation .navigation__link--toggle');
 var menuDropDown = document.querySelector('.menu__navigation .navigation__list--inner');
-// var recall = document.querySelector('.modal__item--recall');
 
 // Hide body filters
 var hideFilters = function () {
@@ -224,6 +248,7 @@ var openMenu = function () {
 var closeMenu = function (evt) {
   if (evt.target === document.body) {
     menu.classList.add('hide');
+    closeModals();
     hideFilters();
   }
 };
@@ -239,11 +264,75 @@ var onDropdownButtonClick = function (evt) {
 openModalRecall();
 onModalCloseClick();
 
+// Assortment dropdown toggler
+var assortmentButton = document.querySelector('.assortment__item--mobile');
+var assortmentItems = document.querySelector('.assortment__list--inner');
+var assortmentIcon = document.querySelector('.assortment-icon');
+
+// Open assortment dropdown click handler
+var onAssortmentDropdownClick = function () {
+  if (deviceWidth < 768) {
+    assortmentItems.classList.toggle('show');
+    assortmentIcon.classList.toggle('assortment-icon--active');
+  }
+};
+
 // Adding event listeners
 document.addEventListener('keydown', onEscapeButtonPress);
 menuOpenButton.addEventListener('click', openMenu);
 document.addEventListener('click', closeMenu);
 menuDropdownButton.addEventListener('click', onDropdownButtonClick);
 modalMessageShowButton.addEventListener('click', openModalMessages);
-productInfoShowButton.addEventListener('click', onProductShowClick);
 document.addEventListener('DOMContentLoaded', onDOMLoading);
+if (productInfoShowButton) {
+  productInfoShowButton.addEventListener('click', onProductShowClick);
+}
+if (assortmentButton) {
+  assortmentButton.addEventListener('click', onAssortmentDropdownClick);
+}
+
+// Open dropdown description of product
+var productItem = document.querySelectorAll('.product--detail');
+var isProductDescriptionOpen = false;
+
+productItem.forEach(function (item) {
+  var productDescriptions = item.querySelector('.product__description');
+  var productDescriptionFilter = item.querySelector('.product__filter');
+  var productDescriptionShowButtonTitle = item.querySelector('.product__more-title');
+  var productDescriptionsShowButton = item.querySelector('.product__more');
+  var productMoreIcon = item.querySelector('.product__icon');
+  var productDescriptionText = item.querySelector('.product__description-item');
+
+  if (productDescriptionText.offsetHeight < 140) {
+    productDescriptionFilter.remove();
+    productDescriptions.style.overflow = 'auto';
+    productDescriptionsShowButton.style.visibility = 'hidden';
+    productDescriptions.style.height = '146rem';
+    productDescriptions.style.minheight = '146rem';
+  }
+
+  productDescriptionsShowButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    if (!isProductDescriptionOpen) {
+      productDescriptions.style.height = 'auto';
+      productDescriptions.style.minheight = '146rem';
+      productDescriptions.style.overflow = 'auto';
+      productDescriptionFilter.style.display = 'none';
+      productDescriptionShowButtonTitle.textContent = 'Скрыть';
+      productMoreIcon.style.transform = 'rotate(180deg)';
+      isProductDescriptionOpen = true;
+    } else {
+      productDescriptions.style.height = '146rem';
+      productDescriptions.style.minheight = '146rem';
+      productDescriptions.style.overflow = 'hidden';
+      productDescriptionFilter.style.display = 'block';
+      productDescriptionShowButtonTitle.textContent = 'Читать далее';
+      productMoreIcon.style.transform = 'rotate(0)';
+      isProductDescriptionOpen = false;
+    }
+
+  });
+
+});
+

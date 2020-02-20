@@ -106,8 +106,8 @@
     display: flex;
   }
 
-  .assortment__item--mobile-active {
-    border-radius: 4rem 4rem 0 0;
+  .assortment-icon--active {
+    transform: rotate(180deg);
   }
 
   .assortment__list--inner {
@@ -121,5 +121,19 @@
   .assortment__list--inner .assortment__item {
     display: flex;
     background: $background-assortment;
+    border: none;
+    border-bottom: 1rem solid $border-assortment;
+  }
+
+  .assortment__list--inner .assortment__item:hover {
+    background: $background-assortment;
+  }
+
+  .assortment__list--inner .assortment__item:first-child {
+    border-radius: 4rem 4rem 0 0;
+  }
+
+  .assortment__list--inner .assortment__item:last-child {
+    border-bottom: none;
   }
 }

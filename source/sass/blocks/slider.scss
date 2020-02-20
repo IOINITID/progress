@@ -132,6 +132,11 @@
   background-color: $background-controls;
 }
 
+.slider__controls-icon {
+  width: 14rem;
+  height: 25rem;
+}
+
 @media (max-width: $width-tablet) {
   .slider {}
 

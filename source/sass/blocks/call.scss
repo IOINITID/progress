@@ -3,6 +3,7 @@
   padding-top: 54rem;
   padding-bottom: 81rem;
   min-height: 400rem;
+  min-width: 1380rem;
 }
 
 .call__wrapper {
@@ -58,5 +59,6 @@
 @media (max-width: $width-tablet) {
   .call {
     display: none;
+    width: auto;
   }
 }

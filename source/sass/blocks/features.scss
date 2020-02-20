@@ -2,6 +2,7 @@
   background-color: $background-features;
   padding-top: 80rem;
   padding-bottom: 67rem;
+  min-width: 1380rem;
 }
 
 .features__wrappper {
@@ -51,6 +52,7 @@
   .features {
     padding-top: 38rem;
     padding-bottom: 44rem;
+    min-width: auto;
   }
 
   .features__wrappper {

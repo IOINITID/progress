@@ -1,7 +1,7 @@
 .schedule {
   display: flex;
   align-items: center;
-  max-width: 237rem;
+  max-width: 238rem;
   width: 100%;
 }
 
@@ -29,6 +29,7 @@
 .schedule-info {
   margin: 0;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 @media (max-width: $width-tablet) {

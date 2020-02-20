@@ -86,6 +86,7 @@
   line-height: 20rem;
   margin: 0;
   height: 146rem;
+  min-height: 146rem;
   margin-bottom: 20rem;
   overflow: hidden;
   position: relative;
@@ -97,7 +98,7 @@
 }
 
 .product__filter {
-  background: linear-gradient(360deg, #ffffff 0%, transparent 100%);
+  background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   top: 0;
   left: 0;
@@ -222,10 +223,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(360deg, #ffffff 0%, transparent 100%);
+    background: linear-gradient(360deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   .product__name {
     // font-size: 17rem;
+  }
+
+  .product__description {
+    min-height: unset;
+  }
+
+  .product__filter {
+    display: flex;
+  }
+
+  .product__more {
+    display: flex;
+    width: auto;
   }
 }

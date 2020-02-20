@@ -1,5 +1,6 @@
 .map {
   position: relative;
+  min-width: 1380rem;
   height: 571rem;
   background: $background-map;
 }
@@ -11,10 +12,12 @@
   top: 0;
   left: 0;
   border: none;
+  pointer-events: none;
 }
 
 @media (max-width: $width-tablet) {
   .map {
+    min-width: auto;
     height: 360rem;
     background: $background-map;
   }

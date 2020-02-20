@@ -4,6 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 870rem;
+  min-width: 1380rem;
 }
 
 .promo--jalousie {
@@ -69,6 +70,7 @@
 
 @media (max-width: $width-tablet) {
   .promo {
+    min-width: auto;
     min-height: auto;
     padding-top: 156rem;
     padding-bottom: 54rem;
