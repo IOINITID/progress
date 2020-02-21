@@ -153,7 +153,7 @@ var sliderDesktopDestroying = function () {
 var checkDeviceWidth = function () {
   if (deviceWidth >= 768 && deviceWidth < 1380) {
     sliderMobileDestroying();
-    setRootSize(getDesktopRootSize());
+    setRootSize(getDesktopRootSize() - 0.1);
   } else if (deviceWidth >= 1380) {
     sliderMobileDestroying();
     setRootSize(1);
