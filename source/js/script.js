@@ -13,7 +13,7 @@ var mobileWidth = 320;
 
 // Get desktop root size
 var getDesktopRootSize = function () {
-  var rootSize = desktopWidth / deviceWidth;
+  var rootSize = deviceWidth / desktopWidth;
   return rootSize;
 };
 
