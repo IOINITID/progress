@@ -30,7 +30,7 @@
 
 ------------
 
-![Preview](preview.jpg `Preview`)
+![Preview](preview.jpg "Preview")
 
 ------------
 
