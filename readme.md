@@ -1,4 +1,4 @@
-Название сайта: **Прогресс** [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+Название: **Прогресс** [![Build Status](https://travis-ci.com/IOINITID/progress.svg?branch=master)](https://travis-ci.com/IOINITID/progress)
 
 ------------
 
@@ -26,16 +26,16 @@
 
 ------------
 
-**Превью сайта:**
+**Превью:**
 
 ------------
 
-![Preview](preview-image.jpg "Preview")
+![Preview](preview.jpg `Preview`)
 
 ------------
 
-Сделано с ❤️ в [WEB-ELITIT.RU](https://www.web-elitit.ru "Web-elitit.ru")
-> Дизайн сайта: **WEB-ELITIT.RU: ООО "Прогресс"*
+Сделано с ❤️
+> Дизайн сайта: *WEB-ELITIT.RU: ООО "Прогресс"*
 
 ------------
 
@@ -44,8 +44,3 @@
 - [contributing.md](contributing.md) — руководство по сборке проекта.
 
 ------------
-
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/1076505-cat-energy-18.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/1076505-cat-energy-18
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/1076505-cat-energy-18/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/1076505-cat-energy-18?type=dev
