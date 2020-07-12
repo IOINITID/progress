@@ -1,139 +1,113 @@
-"use strict";
+// Common.js modules type
+const {src, dest, watch, series, parallel} = require('gulp');
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+const csso = require('gulp-csso');
+const rename = require('gulp-rename');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
+const webpicture = require('gulp-webp');
+const uglify = require('gulp-uglify');
+const svgstore = require('gulp-svgstore');
+const del = require('del');
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var csso = require("gulp-csso");
-var rename = require("gulp-rename");
-var htmlmin = require("gulp-htmlmin");
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var uglify = require("gulp-uglify");
-var svgstore = require("gulp-svgstore");
-var del = require("del");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
+// Clean build directory
+const clean = () => {
+  return del('build');
+};
 
-gulp.task("clean", function () {
-  return del("build");
-});
-
-gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+// Styles optimizations
+const styles = () => {
+  return src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
-
-gulp.task("cssmin", function () {
-  return gulp.src("build/css/style.css")
-    .pipe(sourcemap.init())
+    .pipe(postcss([autoprefixer()]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-})
+    .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('build/css'))
+    .pipe(browserSync.stream());
+};
 
-gulp.task("copy", function () {
-  return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/js/**/*.min.js"
-    ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-});
+// Copy files to project
+const copy = () => {
+  return src(['source/fonts/**/*.{woff,woff2}', 'source/js/**/*.min.js'], {base: 'source'})
+    .pipe(dest('build'));
+};
 
-gulp.task("slick", function () {
-  return gulp.src([
-      "source/slick/*",
-      "source/slick/*/**",
-    ], {
-      base: "source"
-    })
-    .pipe(gulp.dest("build"));
-});
+// Copy slick library to build directory
+const slick = () => {
+  return src(['source/slick/**/*'], {base: 'source'})
+    .pipe(dest('build'));
+};
 
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
-    .pipe(gulp.dest("build"));
-});
+// HTML optimizations
+const html = () => {
+  return src('source/*.html')
+    .pipe(posthtml([include()]))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(dest('build'));
+};
 
-gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+// Images optimizations
+const images = () => {
+  return src('source/img/**/*.{png,jpg,svg}')
     .pipe(imagemin([
-      imagemin.optipng({
-        optimizationLevel: 3
-      }),
-      imagemin.jpegtran({
-        progressive: true
-      }),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
-});
+    .pipe(dest('build/img'));
+};
 
-gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({
-      quality: 75
-    }))
-    .pipe(gulp.dest("build/img"));
-});
+// Create and copy WebP images to build directory
+const webp = () => {
+  return src('source/img/**/*.{png,jpg}')
+    .pipe(webpicture({quality: 75}))
+    .pipe(dest('build/img'));
+};
 
-gulp.task("js", function () {
-  return gulp.src([
-      "source/js/**/*.js",
-      "!source/js/**/*.min.js"
-    ])
+// JavaScript optimizations
+const scripts = () => {
+  return src(['source/js/**/*.js', '!source/js/**/*.min.js'])
     .pipe(uglify())
-    .pipe(rename({
-      suffix: ".min"
-    }))
-    .pipe(gulp.dest("build/js"));
-});
+    .pipe(rename({suffix: '.min'}))
+    .pipe(dest('build/js'));
+};
 
-gulp.task("sprite", function () {
-  return gulp.src([
-      "source/img/logo.svg",
-      "source/img/icon-*.svg"
-    ])
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-});
+// SVG spites to build directory
+const sprites = () => {
+  return src(['source/img/icon-*.svg'])
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest('build/img'));
+};
 
-gulp.task("refresh", function (done) {
-  server.reload();
-  done();
-});
+// Reload server
+const refresh = () => {
+  browserSync.reload();
+};
 
-gulp.task("server", function () {
-  server.init({
-    server: "build/"
-  });
+// Server live reloading
+const server = () => {
+  browserSync.init({server: 'build'});
+  watch('source/sass/**/*.{scss,sass}', styles);
+  watch('source/*.html').on('change', series(html, refresh));
+  watch('source/js/*.js').on('change', series(scripts, copy, refresh));
+};
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "cssmin"));
-  // gulp.watch(["source/img/logo.svg", "source/img/icon-*.svg"], gulp.series("sprite", "refresh"));
-  gulp.watch("source/*.html").on("change", gulp.series("html", "refresh"));
-  gulp.watch("source/js/*.js").on("change", gulp.series("js", "copy", "refresh"));
-});
-// gulp.task("build", gulp.series("clean", "css", "cssmin", "js", "copy", "slick", "sprite", "html", "webp", "images"));
-gulp.task("build", gulp.series("clean", "css", "cssmin", "js", "copy", "slick", "html", "webp", "images"));
-gulp.task("start", gulp.series("build", "server"));
+// Build project
+const build = series(clean, parallel(styles, scripts, copy, slick, html, webp, images));
+
+// Start server
+const start = series(build, server);
+
+exports.build = build;
+exports.start = start;
