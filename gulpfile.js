@@ -16,6 +16,7 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
+const babel = require('gulp-babel');
 
 // Clean build directory
 const clean = () => {
@@ -77,6 +78,7 @@ const webp = () => {
 // JavaScript optimizations
 const scripts = () => {
   return src(['source/js/**/*.js', '!source/js/**/*.min.js'])
+    .pipe(babel({presets: ['@babel/env']}))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(dest('build/js'));
